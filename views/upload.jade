@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  ul
+    each uploadItem in uploadList
+      if uploadItem.id
+        li
+            img.image(src="http://localhost:3000/upload/view/"+uploadItem.id)
